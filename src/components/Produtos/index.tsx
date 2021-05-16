@@ -8,6 +8,7 @@ interface Produto {
   nome: string;
   fotos: [{ src: string; titulo: string; }];
 }
+
 function Produtos() {
   const [produtos, setProdutos] = React.useState([]);
   React.useEffect(() => {
@@ -25,10 +26,10 @@ function Produtos() {
   if (produtos === []) return null;
 
   return (
-    <section className={style.produtos + 'animeLeft'}>
+    <section className={style.produtos + ' animeLeft'}>
       <Head title="Produtos" description="Página de contato" />
       {produtos.map((p: Produto) => (
-        <Link to={`produto/${p.id}`} key={p.id}>
+        <Link to={`produtos/${p.id}`} key={p.id}>
           <img src={p.fotos[0].src} alt={p.fotos[0].titulo} />
           <h1>{p.nome}</h1>
         </Link>
