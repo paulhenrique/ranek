@@ -28,3 +28,24 @@ h1 {
     opacity: initial;
   }
 }
+
+.App {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.loading {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 10px solid #cccccc;
+  border-right-color: transparent;
+  animation: loading 1s infinite;
+  margin: auto;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}

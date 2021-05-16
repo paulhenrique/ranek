@@ -37,7 +37,7 @@ function Produto() {
     fetchProduto(`https://ranekapi.origamid.dev/json/api/produto/${id}`);
 
   }, [id]);
-  if (loading) return (<p>Carregando...</p>);
+  if (loading) return (<div className="loading"></div>);
   if (error.err) return (<p>{error.message}</p>);
   if (produto.nome === '') return null;
 
