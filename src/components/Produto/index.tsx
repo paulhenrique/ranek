@@ -47,7 +47,7 @@ function Produto() {
       <div>
         {produto.fotos.map(foto => (
           <img src={foto.src} alt={foto.titulo} key={foto.src} />
-        ))};
+        ))}
       </div>
       <div> <h1>{produto.nome}</h1>
         <span>R$ {produto.preco}</span>
