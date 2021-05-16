@@ -30,8 +30,17 @@ h1 {
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
+
   max-width: 40rem;
   margin: 0 auto;
+
+  min-height: calc(100vh + 10rem);
+
+  .content {
+    flex: 1;
+  }
 }
 
 .loading {
